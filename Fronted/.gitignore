@@ -1,0 +1,10 @@
+# Ignore node_modules
+node_modules/
+
+# Ignore cache folder inside node_modules
+node_modules/.cache/
+
+node_modules/.cache/default-development/6.pack
+node_modules/.package-lock.json
+node_modules/.package-lock.json
+*.json

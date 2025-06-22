@@ -1,0 +1,87 @@
+/* index.css */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden; /* Asegura que solo se permite el desplazamiento vertical */
+
+  /* fallback for old browsers */
+  background: #b7cd7f;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to bottom, #b7cd7f, #778c43);
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to bottom, #b7cd7f, #778c43);
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: gradientAnimation 300s infinite alternate;
+  background: linear-gradient(to bottom, #b7cd7f, #778c43);
+  pointer-events: none; /* Evita que el fondo interfiera con los eventos de usuario */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background: linear-gradient(to bottom, #b7cd7f, #778c43);
+  }
+  50% {
+    background: linear-gradient(to bottom, #c3cfe2, #eef1f5);
+  }
+  100% {
+    background: linear-gradient(to bottom, #b7cd7f, #778c43);
+  }
+}
+
+.svg-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.svg-shape {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  opacity: 0.7;
+  animation: move 60s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(50vw, 50vh);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+/* index.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url('./media/colored_image_single_color.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
