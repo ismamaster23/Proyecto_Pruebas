@@ -76,7 +76,7 @@ const DietPlanTable = () => {
             setSnackbarSeverity('success');
             setOpenSnackbar(true);
             setTimeout(() => {
-                navigate('https://pruebas-back-50777bb3ad67.herokuapp.com/pacientes');
+                navigate('/pacientes');
             }, 2000);
         } catch (error) {
             console.error('Error saving diet plan:', error);

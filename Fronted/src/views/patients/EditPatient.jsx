@@ -127,7 +127,7 @@ const EditPatient = () => {
 
     useEffect(() => {
         if (correo) {
-            axios.get(`/obtener-paciente/${correo}`)
+            axios.get(`https://pruebas-back-50777bb3ad67.herokuapp.com/obtener-paciente/${correo}`)
                 .then(response => {
                     const data = response.data;
                     setFormData({
