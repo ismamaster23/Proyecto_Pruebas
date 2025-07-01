@@ -64,7 +64,7 @@ const EditDoctorForm = () => {
         // Cargar los datos actuales del doctor
         const fetchDoctorData = async () => {
             try {
-                const response = await axios.get('/api/obtener_doctor', { params: { correo: email } });
+                const response = await axios.get('https://pruebas-back-50777bb3ad67.herokuapp.com/api/obtener_doctor', { params: { correo: email } });
                 setFormData({ ...response.data, password_actual: '', password_nueva: '', confirmPassword: '' });
             } catch (error) {
                 console.error('Error al cargar los datos del doctor:', error);
@@ -140,7 +140,7 @@ const EditDoctorForm = () => {
         e.preventDefault();
         if (validate() && isPasswordMatch) {
             try {
-                const response = await axios.put('http://192.168.0.18:5000/api/editar_doctor', { ...formData, correo: email });
+                const response = await axios.put('https://pruebas-back-50777bb3ad67.herokuapp.com/api/editar_doctor', { ...formData, correo: email });
                 setSnackbarMessage('Datos actualizados con éxito');
                 setSnackbarSeverity('success');
                 setOpenSnackbar(true);

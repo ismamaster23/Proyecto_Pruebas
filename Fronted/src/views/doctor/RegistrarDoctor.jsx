@@ -125,7 +125,7 @@ const NewUserForm = () => {
         e.preventDefault();
         if (validate() && isPasswordMatch && formData.acceptTerms && formData.readConsent) {
             try {
-                const response = await axios.post('/api/guardar_doctor', formData);
+                const response = await axios.post('https://pruebas-back-50777bb3ad67.herokuapp.com/api/guardar_doctor', formData);
                 console.log(response.data);
                 setSnackbarMessage('Registro guardado con éxito');
                 setSnackbarSeverity('success');

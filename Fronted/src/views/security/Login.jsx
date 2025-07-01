@@ -74,7 +74,7 @@ const Login = () => {
     const handleLogin = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post('/api/login', { correo: email, password });
+            const response = await axios.post('https://pruebas-back-50777bb3ad67.herokuapp.com/api/login', { correo: email, password });
             dispatch(login({ email, token: response.data.token }));
             setSnackbarMessage('Inicio de sesión exitoso');
             setSnackbarSeverity('success');
