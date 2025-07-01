@@ -1,0 +1,91 @@
+{
+    "routes": [
+        {
+            "path": "/",
+            "name": "Inicio",
+            "component": "home/Home",
+            "addMenu": false
+        },
+        {
+            "path": "/login",
+            "name": "Login",
+            "component": "security/Login",
+            "addMenu": false
+        },
+        {
+            "path": "/logout",
+            "name": "Logout",
+            "component": "security/Logout",
+            "addMenu": false
+        },
+        {
+            "path": "/pacientes",
+            "name": "Pacientes",
+            "component": "patients/Pacientes",
+            "addMenu": true,
+            "protected": true
+        },
+        {
+            "path": "/generarDietas",
+            "name": "Dietas",
+            "component": "extra/GenerarDietas",
+            "addMenu": false,
+            "protected": true
+        },
+        {
+            "path": "/paciente",
+            "name": "Paciente",
+            "component": "patients/Pacientes",
+            "addMenu": false,
+            "protected": true,
+            "routes": [
+                {
+                    "path": "new",
+                    "name": "Nuevo Paciente",
+                    "component": "patients/NewPatient",
+                    "addMenu": false,
+                    "protected": false
+                },
+                {
+                    "path": "delete",
+                    "name": "Eliminar paciente",
+                    "component": "patients/Patient",
+                    "addMenu": false,
+                    "protected": true
+                },
+                {
+                    "path": "update",
+                    "name": "Editar Paciente",
+                    "component": "patients/EditPatient",
+                    "addMenu": false,
+                    "protected": true
+                }
+            ]
+        },
+        {
+            "path": "/editDoctor",
+            "name": "Editar Usuario",
+            "component": "doctor/EditDoctor.jsx",
+            "addMenu": true,
+            "protected": true
+        },
+        {
+            "path": "/about",
+            "name": "Quienes somos",
+            "component": "extra/About",
+            "addMenu": true
+        },
+        {
+            "path": "/registrarDoctor",
+            "name": "Registrar Doctor",
+            "component": "doctor/RegistrarDoctor",
+            "addMenu": false
+        },
+        {
+            "path": "/manualUsuario",
+            "name": "Manual de ayuda",
+            "component": "tour/TourManual.jsx",
+            "addMenu": true
+        }
+    ]
+}

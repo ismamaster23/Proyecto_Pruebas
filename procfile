@@ -1,0 +1,2 @@
+web: npm start
+web: gunicorn app:app  # Cambia 'app' si tu archivo principal tiene otro nombre
