@@ -66,11 +66,11 @@ const Pacientes = () => {
     };
 
     const handleAddPerson = () => {
-        navigate('https://pruebas-back-50777bb3ad67.herokuapp.com/paciente/new');
+        navigate('/paciente/new');
     };
 
     const handleEditPerson = (correo) => {
-        navigate(`https://pruebas-back-50777bb3ad67.herokuapp.com/paciente/update?correo=${correo}`);
+        navigate(`/paciente/update?correo=${correo}`);
     };
 
     const handleDeletePerson = (correo) => {
