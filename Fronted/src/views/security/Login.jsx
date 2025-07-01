@@ -74,7 +74,7 @@ const Login = () => {
     const handleLogin = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post('http://192.168.0.18:5000/api/login', { correo: email, password });
+            const response = await axios.post('/api/login', { correo: email, password });
             dispatch(login({ email, token: response.data.token }));
             setSnackbarMessage('Inicio de sesión exitoso');
             setSnackbarSeverity('success');

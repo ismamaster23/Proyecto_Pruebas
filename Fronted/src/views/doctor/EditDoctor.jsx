@@ -64,7 +64,7 @@ const EditDoctorForm = () => {
         // Cargar los datos actuales del doctor
         const fetchDoctorData = async () => {
             try {
-                const response = await axios.get('http://192.168.0.18:5000/api/obtener_doctor', { params: { correo: email } });
+                const response = await axios.get('/api/obtener_doctor', { params: { correo: email } });
                 setFormData({ ...response.data, password_actual: '', password_nueva: '', confirmPassword: '' });
             } catch (error) {
                 console.error('Error al cargar los datos del doctor:', error);

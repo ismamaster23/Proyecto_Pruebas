@@ -41,7 +41,7 @@ const DietPlanTable = () => {
     useEffect(() => {
         const fetchDietPlans = async () => {
             try {
-                const response = await axios.get('http://192.168.0.18:5000/obtener_elementos_algoritmo', {
+                const response = await axios.get('/obtener_elementos_algoritmo', {
                     params: {
                         altura,
                         peso,
@@ -68,7 +68,7 @@ const DietPlanTable = () => {
 
     const handleSaveDiet = async (plan) => {
         try {
-            const response = await axios.post(`http://192.168.0.18:5000/edit_dieta/${correo}`, {
+            const response = await axios.post(`/edit_dieta/${correo}`, {
                 datosDieta: plan.individual
             });
             console.log(response.data);

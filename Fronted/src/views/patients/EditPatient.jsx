@@ -127,7 +127,7 @@ const EditPatient = () => {
 
     useEffect(() => {
         if (correo) {
-            axios.get(`http://192.168.0.18:5000/obtener-paciente/${correo}`)
+            axios.get(`/obtener-paciente/${correo}`)
                 .then(response => {
                     const data = response.data;
                     setFormData({
@@ -195,7 +195,7 @@ const EditPatient = () => {
     const handleDialogConfirm = () => {
         console.log(formData);
         setDialogOpen(false);
-        axios.post(`http://192.168.0.18:5000/edit/${formData.correo}`, formData)
+        axios.post(`/edit/${formData.correo}`, formData)
             .then(response => {
                 setSnackbarMessage(response.data.message);
                 setSnackbarSeverity('success');

@@ -125,7 +125,7 @@ const NewUserForm = () => {
         e.preventDefault();
         if (validate() && isPasswordMatch && formData.acceptTerms && formData.readConsent) {
             try {
-                const response = await axios.post('http://192.168.0.18:5000/api/guardar_doctor', formData);
+                const response = await axios.post('/api/guardar_doctor', formData);
                 console.log(response.data);
                 setSnackbarMessage('Registro guardado con éxito');
                 setSnackbarSeverity('success');

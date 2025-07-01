@@ -196,7 +196,7 @@ const NewPatient = () => {
                 triglicerido: formData.trigliceridos || '',
             };
 
-            axios.post('http://192.168.0.18:5000/api/guardar_datos', validFormData)
+            axios.post('/api/guardar_datos', validFormData)
                 .then(response => {
                     setDialogTitle('Éxito');
                     setDialogMessage('Datos guardados exitosamente');
@@ -243,7 +243,7 @@ const NewPatient = () => {
     };
 
     const handleAcceptMigration = () => {
-        axios.patch(`http://192.168.0.18:5000/api/modificar_nutriologo/${correoToEdit}`, { nutriologo: emailNutriologo })
+        axios.patch(`/api/modificar_nutriologo/${correoToEdit}`, { nutriologo: emailNutriologo })
             .then(response => {
                 setDialogTitle('Éxito');
                 setDialogMessage('Nutriólogo actualizado con éxito');

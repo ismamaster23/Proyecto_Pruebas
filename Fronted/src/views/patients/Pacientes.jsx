@@ -39,7 +39,7 @@ const Pacientes = () => {
 
     const fetchRecords = async (query) => {
         try {
-            const response = await axios.get(`http://192.168.0.18:5000/obtener`, {
+            const response = await axios.get(`/obtener`, {
                 params: { query, email }
             });
             setSearchResults(response.data);
@@ -80,7 +80,7 @@ const Pacientes = () => {
 
     const handleConfirmDelete = async () => {
         try {
-            await axios.delete(`http://192.168.0.18:5000/delete/${selectedCorreo}`);
+            await axios.delete(`/delete/${selectedCorreo}`);
             // Refrescar los registros después de eliminar
             fetchRecords(searchQuery);
         } catch (error) {
@@ -103,7 +103,7 @@ const Pacientes = () => {
 
     const handleInfoPerson = async (correo) => {
         try {
-            const response = await axios.get(`http://192.168.0.18:5000/obtener-paciente/${correo}`);
+            const response = await axios.get(`/obtener-paciente/${correo}`);
             if (response.data.datosDieta) {
                 setDietaData(response.data.datosDieta);
                 setInfoDialog(true);
