@@ -68,7 +68,7 @@ const DietPlanTable = () => {
 
     const handleSaveDiet = async (plan) => {
         try {
-            const response = await axios.post(`/edit_dieta/${correo}`, {
+            const response = await axios.post(`https://pruebas-back-50777bb3ad67.herokuapp.com/edit_dieta/${correo}`, {
                 datosDieta: plan.individual
             });
             console.log(response.data);
