@@ -66,11 +66,11 @@ const Pacientes = () => {
     };
 
     const handleAddPerson = () => {
-        navigate('/paciente/new');
+        navigate('https://pruebas-back-50777bb3ad67.herokuapp.com/paciente/new');
     };
 
     const handleEditPerson = (correo) => {
-        navigate(`/paciente/update?correo=${correo}`);
+        navigate(`https://pruebas-back-50777bb3ad67.herokuapp.com/paciente/update?correo=${correo}`);
     };
 
     const handleDeletePerson = (correo) => {
@@ -80,7 +80,7 @@ const Pacientes = () => {
 
     const handleConfirmDelete = async () => {
         try {
-            await axios.delete(`/delete/${selectedCorreo}`);
+            await axios.delete(`https://pruebas-back-50777bb3ad67.herokuapp.com/delete/${selectedCorreo}`);
             // Refrescar los registros después de eliminar
             fetchRecords(searchQuery);
         } catch (error) {
