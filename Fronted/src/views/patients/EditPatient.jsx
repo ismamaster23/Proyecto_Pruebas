@@ -215,7 +215,7 @@ const EditPatient = () => {
     };
 
     const handleRedirect = () => {
-        navigate('/generarDietas', {
+        navigate('/GenerarDietas', {
             state: {
                 correo: formData.correo,
                 peso: formData.weight,
