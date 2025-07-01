@@ -68,7 +68,7 @@ const Login = () => {
 
     const handleRegisterClick = (event) => {
         event.preventDefault();
-        navigate('https://pruebas-back-50777bb3ad67.herokuapp.com/registrarDoctor');
+        navigate('/registrarDoctor');
     };
 
     const handleLogin = async (event) => {
@@ -80,7 +80,7 @@ const Login = () => {
             setSnackbarSeverity('success');
             setOpenSnackbar(true);
             setTimeout(() => {
-                navigate('https://pruebas-back-50777bb3ad67.herokuapp.com/pacientes');
+                navigate('/pacientes');
             }, 2000);
         } catch (error) {
             setSnackbarMessage('Credenciales inválidas');

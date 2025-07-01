@@ -46,11 +46,11 @@ const Home = () => {
     const navigate = useNavigate();
 
     const handleLogin = () => {
-        navigate('https://pruebas-back-50777bb3ad67.herokuapp.com/login');
+        navigate('/login');
     };
 
     const handleRegister = () => {
-        navigate('https://pruebas-back-50777bb3ad67.herokuapp.com/registrarDoctor');
+        navigate('/registrarDoctor');
     };
 
     return (
