@@ -19,7 +19,7 @@ function Menu({ routes, parentPath = '', level = 0, handleClose }) {
         return routes.map((route, index) => {
             const path = parentPath + (route.path ? `${route.path}` : '');
 
-            if (!isAuthenticated && (route.path === '/pacientes' || route.path === '/generarDietas' || route.path === '/paciente' || route.path === '/editDoctor')) {
+            if (!isAuthenticated && (route.path === 'https://pruebas-back-50777bb3ad67.herokuapp.com/pacientes' || route.path === 'https://pruebas-back-50777bb3ad67.herokuapp.com/generarDietas' || route.path === 'https://pruebas-back-50777bb3ad67.herokuapp.com/paciente' || route.path === 'https://pruebas-back-50777bb3ad67.herokuapp.com/editDoctor')) {
                 return null;
             }
 

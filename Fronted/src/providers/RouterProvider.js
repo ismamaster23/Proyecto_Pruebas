@@ -20,7 +20,7 @@ const generateRoutes = (routesArray, isAuthenticated) => {
             );
         }
 
-        if (!isAuthenticated && route.protected && route.path !== '/login' && route.path !== '/registrarDoctor' && route.path !== '/' && route.path !== '/manualUsuario' && route.path !== '/about') {
+        if (!isAuthenticated && route.protected && route.path !== 'https://pruebas-back-50777bb3ad67.herokuapp.com/login' && route.path !== 'https://pruebas-back-50777bb3ad67.herokuapp.com/registrarDoctor' && route.path !== '/' && route.path !== 'https://pruebas-back-50777bb3ad67.herokuapp.com/manualUsuario' && route.path !== 'https://pruebas-back-50777bb3ad67.herokuapp.com/about') {
             return null;
         }
 
@@ -30,7 +30,7 @@ const generateRoutes = (routesArray, isAuthenticated) => {
                 path={route.path}
                 element={
                     <React.Suspense fallback={<div>Loading...</div>}>
-                        {isAuthenticated || !route.protected ? <Component /> : <Navigate to="/login" />}
+                        {isAuthenticated || !route.protected ? <Component /> : <Navigate to="https://pruebas-back-50777bb3ad67.herokuapp.com/login" />}
                     </React.Suspense>
                 }
             />
