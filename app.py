@@ -9,10 +9,10 @@ from bson import ObjectId
 import os
 
 app = Flask(__name__, static_folder='build')
-cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+CORS(app)
 
 # Ruta para servir el archivo index.html
-@app.route('/', defaults={'path': ''})
+@app.route('https://pruebas-back-50777bb3ad67.herokuapp.com/', defaults={'path': ''})
 @app.route('/<path:path>')
 def serve(path):
     if path != "" and os.path.exists(os.path.join(app.static_folder, path)):
