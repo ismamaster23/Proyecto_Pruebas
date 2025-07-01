@@ -9,7 +9,7 @@ from bson import ObjectId
 import os
 
 app = Flask(__name__, static_folder='build')
-cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+CORS(app)
 
 # Ruta para servir el archivo index.html
 @app.route('/', defaults={'path': ''})
