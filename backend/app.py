@@ -9,7 +9,9 @@ from bson import ObjectId
 import os
 
 app = Flask(__name__, static_folder='build')
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "https://proyecto-pruebas-h8vfzdu6q-ismamaster23s-projects.vercel.app", 
+                             "methods": ["GET", "POST", "PUT", "DELETE"],
+                             "allow_headers": ["Content-Type", "Authorization"]}})
 
 # Ruta para servir el archivo index.html
 @app.route('/', defaults={'path': ''})
