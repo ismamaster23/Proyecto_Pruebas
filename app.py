@@ -12,7 +12,7 @@ app = Flask(__name__, static_folder='build')
 CORS(app)
 
 # Ruta para servir el archivo index.html
-@app.route('https://pruebas-back-50777bb3ad67.herokuapp.com/', defaults={'path': ''})
+@app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def serve(path):
     if path != "" and os.path.exists(os.path.join(app.static_folder, path)):
