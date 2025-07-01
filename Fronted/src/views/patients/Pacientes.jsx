@@ -39,7 +39,7 @@ const Pacientes = () => {
 
     const fetchRecords = async (query) => {
         try {
-            const response = await axios.get(`/obtener`, {
+            const response = await axios.get(`https://pruebas-back-50777bb3ad67.herokuapp.com/obtener`, {
                 params: { query, email }
             });
             setSearchResults(response.data);
