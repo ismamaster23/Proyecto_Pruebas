@@ -195,7 +195,7 @@ const EditPatient = () => {
     const handleDialogConfirm = () => {
         console.log(formData);
         setDialogOpen(false);
-        axios.post(`https://pruebas-back-50777bb3ad67.herokuapp.com/edit/${formData.correo}`, formData)
+        axios.post(`/edit/${formData.correo}`, formData)
             .then(response => {
                 setSnackbarMessage(response.data.message);
                 setSnackbarSeverity('success');
