@@ -41,7 +41,7 @@ const DietPlanTable = () => {
     useEffect(() => {
         const fetchDietPlans = async () => {
             try {
-                const response = await axios.get('/obtener_elementos_algoritmo', {
+                const response = await axios.get('https://pruebas-back-50777bb3ad67.herokuapp.com/obtener_elementos_algoritmo', {
                     params: {
                         altura,
                         peso,

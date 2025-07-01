@@ -103,7 +103,7 @@ const Pacientes = () => {
 
     const handleInfoPerson = async (correo) => {
         try {
-            const response = await axios.get(`/obtener-paciente/${correo}`);
+            const response = await axios.get(`https://pruebas-back-50777bb3ad67.herokuapp.com/obtener-paciente/${correo}`);
             if (response.data.datosDieta) {
                 setDietaData(response.data.datosDieta);
                 setInfoDialog(true);
