@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkproyecto_nutricalc=self.webpackChunkproyecto_nutricalc||[]).push([[948],{948:(c,e,t)=>{t.r(e),t.d(e,{default:()=>n});t(5043);var r=t(579);const n=()=>(0,r.jsx)("div",{children:(0,r.jsx)("h1",{children:"Not Fount"})})}}]);
+//# sourceMappingURL=948.ab9c0b3e.chunk.js.map

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkproyecto_nutricalc=self.webpackChunkproyecto_nutricalc||[]).push([[872],{2872:(c,e,r)=>{r.r(e),r.d(e,{default:()=>s});r(5043);var t=r(579);const s=()=>(0,t.jsx)("div",{children:(0,t.jsx)("h1",{children:"Logout"})})}}]);
+//# sourceMappingURL=872.9d322b13.chunk.js.map
