@@ -42,6 +42,7 @@ const Pacientes = () => {
             const response = await axios.get(`https://pruebas-back-50777bb3ad67.herokuapp.com/obtener`, {
                 params: { query, email }
             });
+            console.log("Data received:", response.data);
             setSearchResults(response.data);
         } catch (error) {
             console.error('Error fetching data:', error);
