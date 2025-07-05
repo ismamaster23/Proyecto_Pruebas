@@ -224,7 +224,7 @@ const NewPatient = () => {
     const handleDialogClose = () => {
         setDialogOpen(false);
         if (dialogTitle === 'Éxito') {
-            window.location.href = 'https://pruebas-back-50777bb3ad67.herokuapp.com/GenerarDietas', {
+            navigate('https://pruebas-back-50777bb3ad67.herokuapp.com/GenerarDietas', {
                 state: {
                     correo: formData.correo,
                     peso: formData.peso,
