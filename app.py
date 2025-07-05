@@ -33,7 +33,7 @@ db = dbase.dbConnectionPacientes()
 dbDoctor = dbase.dbConnectionDoctor()
 
 # Guardar datos del paciente
-@app.route('https://pruebas-back-50777bb3ad67.herokuapp.com/api/guardar_datos', methods=['POST'])
+@app.route('/api/guardar_datos', methods=['POST'])
 def receive_data():
     try:
         data = request.json
